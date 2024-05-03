@@ -1,7 +1,18 @@
 package by.itstep.timazay.examStage.task02.model.logic;
 
 public class ImageLogic {
-    public static int[][] rotateImageRight(int[][] matrix) {
+
+    public static int[][] rotateImage(int[][] matrix, char rotation){
+        int[][] result = null;
+        if (rotation == 'L'){
+           result = rotateImageLeft(matrix);
+        } else if (rotation == 'R'){
+            result = rotateImageRight(matrix);
+        }
+            return result;
+
+    }
+    private static int[][] rotateImageRight(int[][] matrix) {
         if (matrix == null || matrix.length == 0)
                  {
             return null;
@@ -20,7 +31,7 @@ public class ImageLogic {
         return rotatedMat;
     }
 
-    public static int[][] rotateImageLeft(int[][] matrix) {
+    private static int[][] rotateImageLeft(int[][] matrix) {
         if (matrix == null || matrix.length == 0) {
             return null;
         }
