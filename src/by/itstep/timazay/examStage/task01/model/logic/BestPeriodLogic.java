@@ -6,7 +6,7 @@ public class BestPeriodLogic {
     public static final int WEEK = 7;
     public static int findMaxNumberOfFives(int num, int[] marks) {
         for (int i = 0; i < marks.length; i++) {
-            if (marks.length != num || marks[i] < 2 || marks[i] > 5){
+            if (marks[i] < 2 || marks[i] > 5){
                 return -1;
             }
         }
